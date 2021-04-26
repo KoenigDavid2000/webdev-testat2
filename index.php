@@ -11,6 +11,8 @@ if (isset($request['page'])) {
 
 if ( $p == '' || $p == 'HomeController') {
     $page = 'HomeController';
+} else if($p == 'Frage1') {
+    $page = 'Frage1';
 } else {
     $page = 'Controller';
 }
