@@ -1,33 +1,30 @@
 <?php
+ 
+include('view/homeview.php');  
+include('view/frageview.php');
+include('worker/userworker.php');
 
-include('controller/controller.php');  
-include('controller/homecontroller.php');  
-include('model/model.php');  
-include('view/view.php');  
+session_start();
 
 $request = array_merge($_POST, $_GET);
 
-$page ='404.php';
 $p = '';
 
-if (isset($request['page'])) {
-    $p = $request['page'];
+if (isset($request['action'])) {
+    $p = $request['action'];
 }
 
-if ( $p == '' || $p == 'HomeController') {
-    $page = 'Home';
-} else if($p == 'Frage1') {
-    $page = 'Frage1';
-} else {
-    $page = 'Controller';
+if ( $p == '' || $p == 'HomeView') {
+    HomeView::openHome();
+} else if($p == 'seite2') {
+    $userworker = new UserWorker();
+    $userworker->saveUser($request['geschlecht'], $request['beruf'], $request['alter']);
+    FrageView::openFragen();
+} else if ($p == 'seite3'){
+    //AuswertungView::openAuswertung();
 }
 
-//require_once('Controller/' . $page . '.php')*/
+//require_once('View/' . $page . '.php');
 
-$name = $page . "Controller";
-
-$controller = new $name($request);
-
-echo $controller->display();
 
 ?>
