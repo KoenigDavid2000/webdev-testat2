@@ -1,7 +1,12 @@
 <?php
 
 class FrageView {
-    public static function openFragen() {
+    public static function openFragen($param=true) {
+
+      if ($param == false) {
+        echo "<h4 style='color:red'>Bitte wählen sie für alle Fragen eine Antwort aus!</h4>";
+      }
+
         $print="
         <!DOCTYPE html>
         <html lang='en'>
@@ -67,8 +72,8 @@ class FrageView {
         <h3>1.Frage:</h3>
           <div class='question-container'>
            <p>Ist das ihre erste Homeoffice-Erfahrung?</p>
-           <input name='frage1' type='radio' value='ja'>Ja
-           <input name='frage1' type='radio' value='nein'>Nein
+           <input name='frage1' type='radio' value='11'>Ja
+           <input name='frage1' type='radio' value='10'>Nein
          </div>
         </div>
         
@@ -76,8 +81,8 @@ class FrageView {
           <h3>2.Frage:</h3>
           <div class='question-container'>
             <p>Wird Ihre Leistungserfüllung im Homeoffice besonders kontrolliert?</p>
-            <input name='frage2' type='radio' value='ja'>Ja
-            <input name='frage2' type='radio' value='nein'>Nein
+            <input name='frage2' type='radio' value='21'>Ja
+            <input name='frage2' type='radio' value='20'>Nein
           </div>
         </div>
         
@@ -85,8 +90,8 @@ class FrageView {
           <h3>3.Frage:</h3>
           <div class='question-container'>
             <p>Können Sie zu Hause ungestört arbeiten??</p>
-            <input name='frage3' type='radio' value='ja'>Ja
-            <input name='frage3' type='radio' value='nein'>Nein
+            <input name='frage3' type='radio' value='31'>Ja
+            <input name='frage3' type='radio' value='30'>Nein
           </div>
         </div>
         
@@ -94,8 +99,8 @@ class FrageView {
           <h3>4.Frage:</h3>
           <div class='question-container'>
             <p>Würden Sie weiterhin im Homeoffice arbeiten, wenn Ihnen die Möglichkeit zur Verfügung steht?</p>
-            <input name='frage4' type='radio' value='ja'>Ja
-            <input name='frage4' type='radio' value='nein'>Nein
+            <input name='frage4' type='radio' value='41'>Ja
+            <input name='frage4' type='radio' value='40'>Nein
           </div>
         </div>
         <div class='question-container div1' style='width: 80%'>
@@ -105,7 +110,11 @@ class FrageView {
         </body>
         </html>";
 
+        //echo $_POST["frage1"];
+        //echo $_POST["frage2"];
+
         echo $print;
+
     }
 }
 
