@@ -6,7 +6,7 @@ class UserWorker {
 
     public function saveUser($geschlecht, $beruf, $alter) {
 
-       echo $geschlecht . ", " . $beruf . ", " . $alter; 
+       //echo $geschlecht . ", " . $beruf . ", " . $alter; 
 
         $sql="insert into user (gender, job, age)
               values (:geschlecht, :beruf, :alter)";

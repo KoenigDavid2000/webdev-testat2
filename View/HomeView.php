@@ -78,16 +78,7 @@ class HomeView {
           <br>
           <input class='button button1' type=submit  value='Umfrage starten'>
         </form>
-        </div>";
-
-        //if ($request['start'] == "maennlich") {
-            if (isset($_POST['geschlecht']))
-            $print.= $_POST['geschlecht'] . "<br>";
-
-            if (isset($_POST['alter']))
-            $print.=$_POST['alter'];
-            //}
-        $print.="
+        </div>
         </body>
         </html>";
 
