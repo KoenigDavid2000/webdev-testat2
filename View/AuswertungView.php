@@ -16,36 +16,38 @@ class AuswertungView {
           <meta charset='UTF-8'>
           <title>Auswertung</title>
           <style>
-          body {
-              background-color: lightgrey;
-          }
+            table, th, td {
+                border: 1px solid black;
+                border-collapse: collapse;
+                border: 3px solid white;
+                background-color: beige;
+                border-radius: 15px;
+            }
 
-          table, th, td {
-              border: 1px solid black;
-              border-collapse: collapse;
-          }
-          table {
-              width: 50%;
-          }
-  
-          table, th, td {
-              border: 3px solid beige;
-          }
-  
-          .td1 {
-              width: 100px;
-          }
-          .left {
-              text-align: center;
-          }
-          </style>
+            body{
+                border: 3px solid beige;
+                border-radius: 15px;
+                padding: 20px;
+            }
+
+            table {
+                width: 50%;
+            }
+
+            .td1 {
+                width: 100px;
+            }
+            .left {
+                text-align: center;
+            }
+    </style>
         </head>
         <body>
             <h1>Auswertung</h1>
-            <p><h4>Fragen:</h4>
+            <p><h2>Fragen:</h2>
                 Frage 1: Ist das ihre erste Homeoffice-Erfahrung?<br>
                 Frage 2: Wird Ihre Leistungserfüllung im Homeoffice besonders kontrolliert?<br>
-                Frage 3: Können Sie zu Hause ungestört arbeiten??<br>
+                Frage 3: Können Sie zu Hause ungestört arbeiten?<br>
                 Frage 4: Würden Sie weiterhin im Homeoffice arbeiten, wenn Ihnen die Möglichkeit zur Verfügung steht?
             </p><br>
            
@@ -92,13 +94,14 @@ class AuswertungView {
             </table>
 
             <br/>
+            <br/>
 
             <table>
                 <tr>
                     <th></th>
                     <th>18-25: Ja</th>
                     <th>26-35: Ja</th>
-                    <th>26-50: Ja</th>
+                    <th>36-50: Ja</th>
                     <th>50+: Ja</th>
                 </tr>
                 <tr>";
@@ -133,7 +136,10 @@ class AuswertungView {
                 
                  </tr>
             </table>
+
             <br/>
+            <br/>
+
             <table>
                 <tr>
                     <th></th>
